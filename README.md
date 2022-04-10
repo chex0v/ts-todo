@@ -1,4 +1,4 @@
-# ts-hello-world
+# ts-todo
 
 ## Project setup
 ```
