@@ -1,5 +1,8 @@
 <template>
-  <li class="collection-item to-do-item">
+  <li
+    class="collection-item to-do-item"
+    @click="() => $router.push(`/post/${modelValue.id}`)"
+  >
     <span class="title to-do-item__id">
       {{ modelValue.id }}
     </span>
