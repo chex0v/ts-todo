@@ -1,9 +1,19 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Главная</router-link>
+  <Navbar />
+  <div class="container">
+    <router-view />
   </div>
-  <router-view/>
 </template>
 
 <style lang="scss">
 </style>
+<script lang="ts">
+import { defineComponent } from "vue";
+import Navbar from "@/components/UI/Navbar.vue";
+
+export default defineComponent({
+  components: {
+    Navbar,
+  },
+});
+</script>

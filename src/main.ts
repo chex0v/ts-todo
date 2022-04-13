@@ -1,6 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import { createApp } from "vue"
+import App from "./App.vue"
+import plugins from "@/plugins"
 
-createApp(App).use(store).use(router).mount('#app')
+require("../node_modules/materialize-css/dist/css/materialize.min.css")
+require("./assets/icons.scss")
+
+const app = createApp(App)
+
+plugins.forEach((plugin) => app.use(plugin))
+
+app.mount("#app")
