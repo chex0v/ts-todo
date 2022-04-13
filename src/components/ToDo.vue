@@ -25,7 +25,7 @@ export default defineComponent({
   },
   setup() {
     const { toDoList, loading, fetchToDos, countAll, allPage, page, nextPage } =
-      useTodos(10);
+      useTodos();
 
     fetchToDos();
 

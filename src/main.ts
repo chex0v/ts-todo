@@ -10,3 +10,9 @@ const app = createApp(App)
 plugins.forEach((plugin) => app.use(plugin))
 
 app.mount("#app")
+
+const sum = (a: number, b = 1) => {
+  return a + b
+}
+
+sum(1, 2)
