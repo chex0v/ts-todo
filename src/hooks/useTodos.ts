@@ -29,7 +29,7 @@ export function useTodos(defaultLimit = 10): UseToDo {
     const { data }: { data: ToDoType[] } = response
     countAll.value = parseInt(response.headers["x-total-count"])
     toDoList.value = data
-    allPage.value = Math.floor(countAll.value / limit.value)
+    allPage.value = Math.ceil(countAll.value / limit.value)
     loading.value = false
   }
 
